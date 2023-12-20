@@ -1,0 +1,17 @@
+<h1>Alta Cliente</h1>
+<label>Nombre:</label><input type="text">
+<br><br>
+<label>CIF:</label><input type="text">
+<br><br>
+<label>Dirección:</label><input type="text">
+<br><br>
+<label>Grupo:</label>
+<select id="listaDesplegable">
+  <option *ngFor="let grupo of grupos" value="grupo">{{ grupo.nombre }}</option>
+</select>
+<br><br>
+<input type="button" value="Guardar" onclick="guardar()">
+<tr>
+  <!-- Recorre las cabeceras de la tabla -->
+  <th *ngFor="let cliente of clientes">{{ cliente }}</th>
+</tr>
